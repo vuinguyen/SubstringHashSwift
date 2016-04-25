@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		529D9ED21C83BE1A00414AE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D9ED11C83BE1A00414AE9 /* AppDelegate.swift */; };
+		529D9ED41C83BE1A00414AE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D9ED31C83BE1A00414AE9 /* ViewController.swift */; };
+		529D9ED71C83BE1A00414AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529D9ED51C83BE1A00414AE9 /* Main.storyboard */; };
+		529D9ED91C83BE1A00414AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529D9ED81C83BE1A00414AE9 /* Assets.xcassets */; };
+		529D9EDC1C83BE1A00414AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529D9EDA1C83BE1A00414AE9 /* LaunchScreen.storyboard */; };
+		529D9EE71C83BE1A00414AE9 /* TrelloJobApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D9EE61C83BE1A00414AE9 /* TrelloJobApplicationTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		529D9EE31C83BE1A00414AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 529D9EC61C83BE1A00414AE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 529D9ECD1C83BE1A00414AE9;
+			remoteInfo = TrelloJobApplication;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		529D9ECE1C83BE1A00414AE9 /* TrelloJobApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrelloJobApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		529D9ED11C83BE1A00414AE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		529D9ED31C83BE1A00414AE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		529D9ED61C83BE1A00414AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		529D9ED81C83BE1A00414AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		529D9EDB1C83BE1A00414AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		529D9EDD1C83BE1A00414AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		529D9EE21C83BE1A00414AE9 /* TrelloJobApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrelloJobApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		529D9EE61C83BE1A00414AE9 /* TrelloJobApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrelloJobApplicationTests.swift; sourceTree = "<group>"; };
+		529D9EE81C83BE1A00414AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		529D9ECB1C83BE1A00414AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		529D9EDF1C83BE1A00414AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		529D9EC51C83BE1A00414AE9 = {
+			isa = PBXGroup;
+			children = (
+				529D9ED01C83BE1A00414AE9 /* TrelloJobApplication */,
+				529D9EE51C83BE1A00414AE9 /* TrelloJobApplicationTests */,
+				529D9ECF1C83BE1A00414AE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		529D9ECF1C83BE1A00414AE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				529D9ECE1C83BE1A00414AE9 /* TrelloJobApplication.app */,
+				529D9EE21C83BE1A00414AE9 /* TrelloJobApplicationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		529D9ED01C83BE1A00414AE9 /* TrelloJobApplication */ = {
+			isa = PBXGroup;
+			children = (
+				529D9ED11C83BE1A00414AE9 /* AppDelegate.swift */,
+				529D9ED31C83BE1A00414AE9 /* ViewController.swift */,
+				529D9ED51C83BE1A00414AE9 /* Main.storyboard */,
+				529D9ED81C83BE1A00414AE9 /* Assets.xcassets */,
+				529D9EDA1C83BE1A00414AE9 /* LaunchScreen.storyboard */,
+				529D9EDD1C83BE1A00414AE9 /* Info.plist */,
+			);
+			path = TrelloJobApplication;
+			sourceTree = "<group>";
+		};
+		529D9EE51C83BE1A00414AE9 /* TrelloJobApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				529D9EE61C83BE1A00414AE9 /* TrelloJobApplicationTests.swift */,
+				529D9EE81C83BE1A00414AE9 /* Info.plist */,
+			);
+			path = TrelloJobApplicationTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		529D9ECD1C83BE1A00414AE9 /* TrelloJobApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 529D9EEB1C83BE1A00414AE9 /* Build configuration list for PBXNativeTarget "TrelloJobApplication" */;
+			buildPhases = (
+				529D9ECA1C83BE1A00414AE9 /* Sources */,
+				529D9ECB1C83BE1A00414AE9 /* Frameworks */,
+				529D9ECC1C83BE1A00414AE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrelloJobApplication;
+			productName = TrelloJobApplication;
+			productReference = 529D9ECE1C83BE1A00414AE9 /* TrelloJobApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+		529D9EE11C83BE1A00414AE9 /* TrelloJobApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 529D9EEE1C83BE1A00414AE9 /* Build configuration list for PBXNativeTarget "TrelloJobApplicationTests" */;
+			buildPhases = (
+				529D9EDE1C83BE1A00414AE9 /* Sources */,
+				529D9EDF1C83BE1A00414AE9 /* Frameworks */,
+				529D9EE01C83BE1A00414AE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				529D9EE41C83BE1A00414AE9 /* PBXTargetDependency */,
+			);
+			name = TrelloJobApplicationTests;
+			productName = TrelloJobApplicationTests;
+			productReference = 529D9EE21C83BE1A00414AE9 /* TrelloJobApplicationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		529D9EC61C83BE1A00414AE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Sunfish Empire";
+				TargetAttributes = {
+					529D9ECD1C83BE1A00414AE9 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					529D9EE11C83BE1A00414AE9 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 529D9ECD1C83BE1A00414AE9;
+					};
+				};
+			};
+			buildConfigurationList = 529D9EC91C83BE1A00414AE9 /* Build configuration list for PBXProject "TrelloJobApplication" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 529D9EC51C83BE1A00414AE9;
+			productRefGroup = 529D9ECF1C83BE1A00414AE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				529D9ECD1C83BE1A00414AE9 /* TrelloJobApplication */,
+				529D9EE11C83BE1A00414AE9 /* TrelloJobApplicationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		529D9ECC1C83BE1A00414AE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				529D9EDC1C83BE1A00414AE9 /* LaunchScreen.storyboard in Resources */,
+				529D9ED91C83BE1A00414AE9 /* Assets.xcassets in Resources */,
+				529D9ED71C83BE1A00414AE9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		529D9EE01C83BE1A00414AE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		529D9ECA1C83BE1A00414AE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				529D9ED41C83BE1A00414AE9 /* ViewController.swift in Sources */,
+				529D9ED21C83BE1A00414AE9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		529D9EDE1C83BE1A00414AE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				529D9EE71C83BE1A00414AE9 /* TrelloJobApplicationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		529D9EE41C83BE1A00414AE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 529D9ECD1C83BE1A00414AE9 /* TrelloJobApplication */;
+			targetProxy = 529D9EE31C83BE1A00414AE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		529D9ED51C83BE1A00414AE9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				529D9ED61C83BE1A00414AE9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		529D9EDA1C83BE1A00414AE9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				529D9EDB1C83BE1A00414AE9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		529D9EE91C83BE1A00414AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		529D9EEA1C83BE1A00414AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		529D9EEC1C83BE1A00414AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TrelloJobApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunfishempire.TrelloJobApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		529D9EED1C83BE1A00414AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TrelloJobApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunfishempire.TrelloJobApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		529D9EEF1C83BE1A00414AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TrelloJobApplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunfishempire.TrelloJobApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrelloJobApplication.app/TrelloJobApplication";
+			};
+			name = Debug;
+		};
+		529D9EF01C83BE1A00414AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TrelloJobApplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunfishempire.TrelloJobApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrelloJobApplication.app/TrelloJobApplication";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		529D9EC91C83BE1A00414AE9 /* Build configuration list for PBXProject "TrelloJobApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529D9EE91C83BE1A00414AE9 /* Debug */,
+				529D9EEA1C83BE1A00414AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		529D9EEB1C83BE1A00414AE9 /* Build configuration list for PBXNativeTarget "TrelloJobApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529D9EEC1C83BE1A00414AE9 /* Debug */,
+				529D9EED1C83BE1A00414AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		529D9EEE1C83BE1A00414AE9 /* Build configuration list for PBXNativeTarget "TrelloJobApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529D9EEF1C83BE1A00414AE9 /* Debug */,
+				529D9EF01C83BE1A00414AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 529D9EC61C83BE1A00414AE9 /* Project object */;
+}
