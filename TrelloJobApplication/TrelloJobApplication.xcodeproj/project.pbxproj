@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F20EC2E1CE7C6EB00D42991 /* HashUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20EC2D1CE7C6EB00D42991 /* HashUtils.swift */; };
+		0F20EC301CE7C9A100D42991 /* HashConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20EC2F1CE7C9A100D42991 /* HashConfigurationModel.swift */; };
+		0F20EC321CE7CF5100D42991 /* ReverseHashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20EC311CE7CF5100D42991 /* ReverseHashViewModel.swift */; };
+		0F20EC361CE7CFEB00D42991 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20EC351CE7CFEB00D42991 /* Constants.swift */; };
 		529D9ED21C83BE1A00414AE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D9ED11C83BE1A00414AE9 /* AppDelegate.swift */; };
 		529D9ED41C83BE1A00414AE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D9ED31C83BE1A00414AE9 /* ViewController.swift */; };
 		529D9ED71C83BE1A00414AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529D9ED51C83BE1A00414AE9 /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F20EC2D1CE7C6EB00D42991 /* HashUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashUtils.swift; sourceTree = "<group>"; };
+		0F20EC2F1CE7C9A100D42991 /* HashConfigurationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashConfigurationModel.swift; sourceTree = "<group>"; };
+		0F20EC311CE7CF5100D42991 /* ReverseHashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseHashViewModel.swift; sourceTree = "<group>"; };
+		0F20EC351CE7CFEB00D42991 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		529D9ECE1C83BE1A00414AE9 /* TrelloJobApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrelloJobApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529D9ED11C83BE1A00414AE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		529D9ED31C83BE1A00414AE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +64,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F20EC331CE7CFA200D42991 /* ReverseHash */ = {
+			isa = PBXGroup;
+			children = (
+				529D9ED31C83BE1A00414AE9 /* ViewController.swift */,
+				0F20EC311CE7CF5100D42991 /* ReverseHashViewModel.swift */,
+				0F20EC2F1CE7C9A100D42991 /* HashConfigurationModel.swift */,
+			);
+			name = ReverseHash;
+			sourceTree = "<group>";
+		};
+		0F20EC341CE7CFB200D42991 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0F20EC351CE7CFEB00D42991 /* Constants.swift */,
+				0F20EC2D1CE7C6EB00D42991 /* HashUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		0F20EC371CE7D02B00D42991 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				529D9ED81C83BE1A00414AE9 /* Assets.xcassets */,
+				529D9EDA1C83BE1A00414AE9 /* LaunchScreen.storyboard */,
+				529D9EDD1C83BE1A00414AE9 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		529D9EC51C83BE1A00414AE9 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +114,11 @@
 		529D9ED01C83BE1A00414AE9 /* TrelloJobApplication */ = {
 			isa = PBXGroup;
 			children = (
+				0F20EC331CE7CFA200D42991 /* ReverseHash */,
+				0F20EC341CE7CFB200D42991 /* Utils */,
 				529D9ED11C83BE1A00414AE9 /* AppDelegate.swift */,
-				529D9ED31C83BE1A00414AE9 /* ViewController.swift */,
 				529D9ED51C83BE1A00414AE9 /* Main.storyboard */,
-				529D9ED81C83BE1A00414AE9 /* Assets.xcassets */,
-				529D9EDA1C83BE1A00414AE9 /* LaunchScreen.storyboard */,
-				529D9EDD1C83BE1A00414AE9 /* Info.plist */,
+				0F20EC371CE7D02B00D42991 /* Resources */,
 			);
 			path = TrelloJobApplication;
 			sourceTree = "<group>";
@@ -197,8 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F20EC301CE7C9A100D42991 /* HashConfigurationModel.swift in Sources */,
+				0F20EC321CE7CF5100D42991 /* ReverseHashViewModel.swift in Sources */,
+				0F20EC2E1CE7C6EB00D42991 /* HashUtils.swift in Sources */,
 				529D9ED41C83BE1A00414AE9 /* ViewController.swift in Sources */,
 				529D9ED21C83BE1A00414AE9 /* AppDelegate.swift in Sources */,
+				0F20EC361CE7CFEB00D42991 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +428,7 @@
 				529D9EED1C83BE1A00414AE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		529D9EEE1C83BE1A00414AE9 /* Build configuration list for PBXNativeTarget "TrelloJobApplicationTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +437,7 @@
 				529D9EF01C83BE1A00414AE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

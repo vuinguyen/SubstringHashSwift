@@ -6,64 +6,70 @@
 
 import UIKit
 
-func hash (eightLetterString: String) ->Int64
-{
-    var h:Int64 = 7
-    let letters:String = "acdegilmnoprstuw"
-    
-    for i in 0..<eightLetterString.characters.count {
-        let eightLetterStringIndex = eightLetterString.startIndex.advancedBy(i);
-        print(eightLetterStringIndex)
-        
-        let eightLetterStringChar = eightLetterString[eightLetterStringIndex]
-        print(eightLetterStringChar)
-        
-        
-        let lettersIndex = letters.characters.indexOf(eightLetterStringChar)
-        let position = letters.startIndex.distanceTo(lettersIndex!)
-        h = (h * 37 + position);
-        print(h);
-        print("\n")
+//func hash (eightLetterString: String) ->Int64
+//{
+//    var h:Int64 = 7
+//    let letters:String = "acdegilmnoprstuw"
+//    
+//    for i in 0..<eightLetterString.characters.count {
+//        let eightLetterStringIndex = eightLetterString.startIndex.advancedBy(i);
+//        print(eightLetterStringIndex)
+//        
+//        let eightLetterStringChar = eightLetterString[eightLetterStringIndex]
+//        print(eightLetterStringChar)
+//        
+//        
+//        let lettersIndex = letters.characters.indexOf(eightLetterStringChar)
+//        let position = letters.startIndex.distanceTo(lettersIndex!)
+//        h = (h * 37 + position);
+//        print(h);
+//        print("\n")
+//    }
+//    return h
+//}
+//
+//hash("leepadg")
+
+func reverseHashGen(wordLength: Int, hashKey: String) -> (Int64) -> String {
+    return {(hashie: Int64) -> String in
+        return reverseHash(hashie, wordLength: wordLength, hashKey: hashKey)
     }
-    return h
 }
 
-hash("leepadg")
-
-func reverseHash(hashie:Int64, wordLength:Int) -> String
+func reverseHash(hashie:Int64, wordLength:Int, hashKey: String) -> String
 {
-    let letters:String = "acdegilmnoprstuw"
-    let thirtySeven:Int64 = 37
-    
-    var remainders = [Int64]()
-    remainders.insert(hashie, atIndex: 0)
-    print(remainders[0])
-    var remainder = hashie
-    for i in 1..<wordLength+1 {
-        remainders.insert(remainder / thirtySeven, atIndex: i)
-        remainder = remainders[i]
-        print (remainder)
-    }
-
-    var reversedString:String = ""
-    var resultString:String = ""
-    var letterIndex = 0
-    for i in 0..<wordLength {
-    
-    letterIndex = remainders[i] - (remainders[i+1] * 37)
-    print("\n")
-    print(letterIndex)
-    
-    let lettersStringIndex = letters.startIndex.advancedBy(letterIndex);
-    print (letters[lettersStringIndex])
-    resultString.append(letters[lettersStringIndex])
-    }
-    
-    reversedString = String(resultString.characters.reverse())
-    print(reversedString)
-    return reversedString
+    let remainders = computeRemainders(hashie, wordLength: wordLength)
+    let resultString = decodeRemainders(remainders, wordLength: wordLength, hashKey: hashKey)
+    return resultString
 }
 
-reverseHash(680131659347, wordLength:7)
+func computeRemainders(hashie: Int64, wordLength: Int) -> [Int64] {
+    var remainders:[Int64] = [hashie]
+    for i in 1...wordLength {
+        remainders.append(remainders[i-1] / 37)
+    }
+    return remainders
+}
 
-reverseHash(25377615533200, wordLength:8)
+func decodeRemainders(remainders:[Int64], wordLength: Int, hashKey: String) -> String {
+    var resultString = ""
+    
+    for i in (0..<wordLength).reverse() {
+        let letterIndex = remainders[i] - (remainders[i+1] * 37)
+        let lettersStringIndex = hashKey.startIndex.advancedBy(Int(letterIndex));
+        
+        resultString.append(hashKey[lettersStringIndex])
+    }
+    
+    return resultString;
+}
+
+var reversed = reverseHash(680131659347, wordLength:7, hashKey: "acdegilmnoprstuw")
+assert(reversed == "leepadg")
+
+let exampleReverser = reverseHashGen(7, hashKey: "acdegilmnoprstuw")
+reversed = exampleReverser(680131659347)
+assert(reversed == "leepadg")
+
+let problemReverser = reverseHashGen(8, hashKey: "acdegilmnoprstuw")
+reversed = problemReverser(25377615533200)
