@@ -7,3 +7,6 @@ Read the problem description in the .png file first, before looking at my code, 
 The Trello Playground is the solution without the UI, and the TrelloJobApplication is the solution as an iOS app.
 
 I didn’t get the job, but I got through the HR screen and the 1st round of technical interviews because of this program, so I must have done something right. :)
+
+For a video demonstration of this code, go to:
+https://youtu.be/WeTAQKXxebo
