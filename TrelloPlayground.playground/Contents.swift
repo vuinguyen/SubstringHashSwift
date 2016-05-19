@@ -44,7 +44,7 @@ func reverseHash(hashie:Int64, wordLength:Int, hashKey: String) -> String
 }
 
 func computeRemainders(hashie: Int64, wordLength: Int) -> [Int64] {
-    var remainders:[Int64] = [hashie]
+    var remainders: [Int64] = [hashie]
     for i in 1...wordLength {
         remainders.append(remainders[i-1] / 37)
     }
