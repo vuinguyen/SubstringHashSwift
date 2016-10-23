@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ReverseHashViewController: UIViewController, UITextFieldDelegate {
+    static let StoryboardIdentifier = "ReverseHashViewController"
+    
     // MARK: Properties
     @IBOutlet weak var hashNumberField: UITextField!
     @IBOutlet weak var stringLengthField: UITextField!
     @IBOutlet weak var answerLabel: UILabel!
     
-    let viewModel = ReverseHashViewModel()
+    var viewModel: ReverseHashViewModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +33,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Actions
     @IBAction func hashNumberChanged(_ sender: AnyObject) {
-        //TODO: push parsing out to view model
-        let hashNumber: Int64 = Int64(hashNumberField.text!)!;
-        viewModel.hashNumberUpdated(hashNumber)
+        viewModel.hashNumberUpdated(hashNumberField.text)
     }
     
     @IBAction func stringLengthChanged(_ sender: AnyObject) {
-        //TODO: push parsing out to view model
-        let wordLength = Int(stringLengthField.text!) ?? Constants.DefaultWordLength
-        viewModel.wordLengthUpdated(wordLength)
+        viewModel.wordLengthUpdated(stringLengthField.text)
     }
     
     @IBAction func calculateStringFromHash(_ sender: UIButton) {
@@ -58,17 +56,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateWithResult(_ result: ReverseHashResult) -> Void {
-        //TODO: these cases dont do anything different, we likely dont need an enum
         switch result {
-        case .error(let message, let color):
+        case .error(let message):
             answerLabel.text = message
-            answerLabel.backgroundColor = color
-        case .noResult(let message, let color):
+            answerLabel.backgroundColor = result.color
+        case .noResult(let message):
             answerLabel.text = message
-            answerLabel.backgroundColor = color
-        case .success(let message, let color):
+            answerLabel.backgroundColor = result.color
+        case .success(let message):
             answerLabel.text = message
-            answerLabel.backgroundColor = color
+            answerLabel.backgroundColor = result.color
         }
     }
 }

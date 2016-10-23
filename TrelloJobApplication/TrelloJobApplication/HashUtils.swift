@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HashUtils {
+struct SolutionHashGenerator: HashGenerator {
     
     // Given a String, find its hash. The original forward hash
     // implementaiton for demonstration purposes.
@@ -29,20 +29,21 @@ struct HashUtils {
     }
     
     // Generate a reverse hash function given a word length and the hash key
-    static func reverseHashGen(_ wordLength: Int, hashKey: String) -> (Int64) -> String {
-        return {(hashie: Int64) -> String in
-            return reverseHash(hashie, wordLength: wordLength, hashKey: hashKey)
+    func reverseHashGen(_ wordLength: Int, hashKey: String) -> (Int64) -> String {
+        return { (hashie: Int64) -> String in
+            return SolutionHashGenerator.reverseHash(hashie,
+                                                     wordLength: wordLength,
+                                                     hashKey: hashKey)
         }
     }
     
-    static func reverseHash(_ hashie:Int64, wordLength:Int, hashKey: String) -> String
-    {
+    private static func reverseHash(_ hashie:Int64, wordLength:Int, hashKey: String) -> String {
         let remainders = computeRemainders(hashie, wordLength: wordLength)
         let resultString = decodeRemainders(remainders, wordLength: wordLength, hashKey: hashKey)
         return resultString
     }
     
-    static func computeRemainders(_ hashie: Int64, wordLength: Int) -> [Int64] {
+    private static func computeRemainders(_ hashie: Int64, wordLength: Int) -> [Int64] {
         var remainders:[Int64] = [hashie]
         for i in 1...wordLength {
             remainders.append(remainders[i-1] / 37)
@@ -50,7 +51,7 @@ struct HashUtils {
         return remainders
     }
     
-    static func decodeRemainders(_ remainders:[Int64], wordLength: Int, hashKey: String) -> String {
+    private static func decodeRemainders(_ remainders:[Int64], wordLength: Int, hashKey: String) -> String {
         var resultString = ""
         
         for i in (0..<wordLength).reversed() {

@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1AEC6D1DBC492E00535B09 /* HashGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AEC6C1DBC492E00535B09 /* HashGenerator.swift */; };
+		0F1AEC701DBC495400535B09 /* ReverseHashViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AEC6F1DBC495400535B09 /* ReverseHashViewModelProtocol.swift */; };
+		0F1AEC731DBC49B200535B09 /* ReverseHashResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1AEC721DBC49B200535B09 /* ReverseHashResult.swift */; };
 		0F20EC2E1CE7C6EB00D42991 /* HashUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20EC2D1CE7C6EB00D42991 /* HashUtils.swift */; };
 		0F20EC301CE7C9A100D42991 /* HashConfigurationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20EC2F1CE7C9A100D42991 /* HashConfigurationModel.swift */; };
 		0F20EC321CE7CF5100D42991 /* ReverseHashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20EC311CE7CF5100D42991 /* ReverseHashViewModel.swift */; };
 		0F20EC361CE7CFEB00D42991 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20EC351CE7CFEB00D42991 /* Constants.swift */; };
 		529D9ED21C83BE1A00414AE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D9ED11C83BE1A00414AE9 /* AppDelegate.swift */; };
-		529D9ED41C83BE1A00414AE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D9ED31C83BE1A00414AE9 /* ViewController.swift */; };
+		529D9ED41C83BE1A00414AE9 /* ReverseHashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D9ED31C83BE1A00414AE9 /* ReverseHashViewController.swift */; };
 		529D9ED71C83BE1A00414AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529D9ED51C83BE1A00414AE9 /* Main.storyboard */; };
 		529D9ED91C83BE1A00414AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529D9ED81C83BE1A00414AE9 /* Assets.xcassets */; };
 		529D9EDC1C83BE1A00414AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529D9EDA1C83BE1A00414AE9 /* LaunchScreen.storyboard */; };
@@ -30,13 +33,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F1AEC6C1DBC492E00535B09 /* HashGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashGenerator.swift; sourceTree = "<group>"; };
+		0F1AEC6F1DBC495400535B09 /* ReverseHashViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseHashViewModelProtocol.swift; sourceTree = "<group>"; };
+		0F1AEC721DBC49B200535B09 /* ReverseHashResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseHashResult.swift; sourceTree = "<group>"; };
 		0F20EC2D1CE7C6EB00D42991 /* HashUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashUtils.swift; sourceTree = "<group>"; };
 		0F20EC2F1CE7C9A100D42991 /* HashConfigurationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashConfigurationModel.swift; sourceTree = "<group>"; };
 		0F20EC311CE7CF5100D42991 /* ReverseHashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseHashViewModel.swift; sourceTree = "<group>"; };
 		0F20EC351CE7CFEB00D42991 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		529D9ECE1C83BE1A00414AE9 /* TrelloJobApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrelloJobApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529D9ED11C83BE1A00414AE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		529D9ED31C83BE1A00414AE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		529D9ED31C83BE1A00414AE9 /* ReverseHashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseHashViewController.swift; sourceTree = "<group>"; };
 		529D9ED61C83BE1A00414AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		529D9ED81C83BE1A00414AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		529D9EDB1C83BE1A00414AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,12 +70,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F1AEC6B1DBC48FF00535B09 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0F1AEC6C1DBC492E00535B09 /* HashGenerator.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		0F1AEC6E1DBC493E00535B09 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0F1AEC6F1DBC495400535B09 /* ReverseHashViewModelProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		0F1AEC711DBC49A700535B09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0F20EC2F1CE7C9A100D42991 /* HashConfigurationModel.swift */,
+				0F1AEC721DBC49B200535B09 /* ReverseHashResult.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		0F20EC331CE7CFA200D42991 /* ReverseHash */ = {
 			isa = PBXGroup;
 			children = (
-				529D9ED31C83BE1A00414AE9 /* ViewController.swift */,
+				0F1AEC711DBC49A700535B09 /* Models */,
+				0F1AEC6E1DBC493E00535B09 /* Protocols */,
 				0F20EC311CE7CF5100D42991 /* ReverseHashViewModel.swift */,
-				0F20EC2F1CE7C9A100D42991 /* HashConfigurationModel.swift */,
+				529D9ED31C83BE1A00414AE9 /* ReverseHashViewController.swift */,
 			);
 			name = ReverseHash;
 			sourceTree = "<group>";
@@ -77,6 +109,7 @@
 		0F20EC341CE7CFB200D42991 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0F1AEC6B1DBC48FF00535B09 /* Protocols */,
 				0F20EC351CE7CFEB00D42991 /* Constants.swift */,
 				0F20EC2D1CE7C6EB00D42991 /* HashUtils.swift */,
 			);
@@ -238,9 +271,12 @@
 				0F20EC301CE7C9A100D42991 /* HashConfigurationModel.swift in Sources */,
 				0F20EC321CE7CF5100D42991 /* ReverseHashViewModel.swift in Sources */,
 				0F20EC2E1CE7C6EB00D42991 /* HashUtils.swift in Sources */,
-				529D9ED41C83BE1A00414AE9 /* ViewController.swift in Sources */,
+				0F1AEC6D1DBC492E00535B09 /* HashGenerator.swift in Sources */,
+				529D9ED41C83BE1A00414AE9 /* ReverseHashViewController.swift in Sources */,
 				529D9ED21C83BE1A00414AE9 /* AppDelegate.swift in Sources */,
 				0F20EC361CE7CFEB00D42991 /* Constants.swift in Sources */,
+				0F1AEC731DBC49B200535B09 /* ReverseHashResult.swift in Sources */,
+				0F1AEC701DBC495400535B09 /* ReverseHashViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
