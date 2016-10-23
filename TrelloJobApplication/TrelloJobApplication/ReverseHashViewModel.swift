@@ -10,19 +10,19 @@ import Foundation
 import UIKit
 
 public enum ReverseHashResult {
-    case NoResult(String, UIColor)
-    case Error(String, UIColor)
-    case Success(String, UIColor)
+    case noResult(String, UIColor)
+    case error(String, UIColor)
+    case success(String, UIColor)
 }
 
-public class ReverseHashViewModel {
-    private var model: HashConfigurationModel
-    private var hashReverser: ((Int64) -> String)!
+open class ReverseHashViewModel {
+    fileprivate var model: HashConfigurationModel
+    fileprivate var hashReverser: ((Int64) -> String)!
     
-    public var hashNumber: String {
+    open var hashNumber: String {
         get { return "\(model.hashNumber)" }
     }
-    public var wordLength: String {
+    open var wordLength: String {
         get { return "\(model.wordLength)" }
     }
     
@@ -31,32 +31,32 @@ public class ReverseHashViewModel {
         updateHashFunction()
     }
     
-    private func updateHashFunction() -> Void {
+    fileprivate func updateHashFunction() -> Void {
         hashReverser = HashUtils.reverseHashGen(model.wordLength, hashKey: model.hashKey)
     }
     
     // MARK: View Notifications
     
-    public func hashNumberUpdated(hashNumber: Int64) -> Void {
+    open func hashNumberUpdated(_ hashNumber: Int64) -> Void {
         model = HashConfigurationModel(hashNumber: hashNumber, wordLength: model.wordLength)
         updateHashFunction()
     }
     
-    public func wordLengthUpdated(wordLength: Int) -> Void {
+    open func wordLengthUpdated(_ wordLength: Int) -> Void {
         model = HashConfigurationModel(hashNumber: model.hashNumber, wordLength: wordLength)
         updateHashFunction()
     }
     
-    public func reverseHashRequested() -> ReverseHashResult {
+    open func reverseHashRequested() -> ReverseHashResult {
         let reversed = hashReverser(model.hashNumber)
-        let result = ReverseHashResult.Success(reversed, UIColor.greenColor())
+        let result = ReverseHashResult.success(reversed, UIColor.green)
         return result
     }
     
-    public func reset() -> ReverseHashResult {
+    open func reset() -> ReverseHashResult {
         model = HashConfigurationModel(hashNumber: Constants.DefaultHashNumber, wordLength: Constants.DefaultWordLength)
         updateHashFunction()
         
-        return ReverseHashResult.NoResult("<answer displayed here>", UIColor.clearColor())
+        return ReverseHashResult.noResult("<answer displayed here>", UIColor.clear)
     }
 }
