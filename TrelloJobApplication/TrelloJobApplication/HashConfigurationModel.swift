@@ -13,10 +13,10 @@ struct HashConfigurationModel {
     let wordLength: Int
     let hashKey: String
     
-    init(hashNumber: Int64, wordLength: Int, hashKey: String? = nil) {
+    init(hashNumber: Int64, wordLength: Int, hashKey: String = Constants.ProblemHashKey) {
         self.hashNumber = hashNumber
         self.wordLength = wordLength
-        self.hashKey = hashKey ?? Constants.ProblemHashKey
+        self.hashKey = hashKey
     }
 }
 

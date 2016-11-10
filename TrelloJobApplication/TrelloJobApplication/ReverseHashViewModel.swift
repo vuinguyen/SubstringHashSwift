@@ -9,54 +9,50 @@
 import Foundation
 import UIKit
 
-public enum ReverseHashResult {
-    case NoResult(String, UIColor)
-    case Error(String, UIColor)
-    case Success(String, UIColor)
-}
-
-public class ReverseHashViewModel {
-    private var model: HashConfigurationModel
-    private var hashReverser: ((Int64) -> String)!
-    
-    public var hashNumber: String {
-        get { return "\(model.hashNumber)" }
+class ReverseHashViewModel: ReverseHashViewModelProtocol {
+    private let hashGenerator: HashGenerator
+    private var model: HashConfigurationModel {
+        didSet {
+            updateHashFunction()
+        }
     }
-    public var wordLength: String {
-        get { return "\(model.wordLength)" }
-    }
+    private var hashReverser: ((Int64) -> String)
     
-    init() {
-        model = HashConfigurationModel(hashNumber: Constants.DefaultHashNumber, wordLength: Constants.DefaultWordLength)
-        updateHashFunction()
+    init(hashGenerator: HashGenerator = SolutionHashGenerator()) {
+        self.hashGenerator = hashGenerator
+        self.model = HashConfigurationModel(hashNumber: Constants.DefaultHashNumber, wordLength: Constants.DefaultWordLength)
+        self.hashReverser = self.hashGenerator.reverseHashGen(model.wordLength, hashKey: model.hashKey)
     }
     
     private func updateHashFunction() -> Void {
-        hashReverser = HashUtils.reverseHashGen(model.wordLength, hashKey: model.hashKey)
+        hashReverser = hashGenerator.reverseHashGen(model.wordLength, hashKey: model.hashKey)
     }
     
     // MARK: View Notifications
     
-    public func hashNumberUpdated(hashNumber: Int64) -> Void {
-        model = HashConfigurationModel(hashNumber: hashNumber, wordLength: model.wordLength)
-        updateHashFunction()
+    func hashNumberUpdated(_ hashNumber: String?) -> Void {
+        var number = Int64(0)
+        if let hashNumber = hashNumber, let parsedNumber = Int64(hashNumber) {
+            number = parsedNumber
+        }
+        model = HashConfigurationModel(hashNumber: number, wordLength: model.wordLength)
     }
     
-    public func wordLengthUpdated(wordLength: Int) -> Void {
-        model = HashConfigurationModel(hashNumber: model.hashNumber, wordLength: wordLength)
-        updateHashFunction()
+    func wordLengthUpdated(_ wordLength: String?) -> Void {
+        var length = Constants.DefaultWordLength
+        if let wordLength = wordLength, let parsedLength = Int(wordLength) {
+           length = parsedLength
+        }
+        model = HashConfigurationModel(hashNumber: model.hashNumber, wordLength: length)
     }
     
-    public func reverseHashRequested() -> ReverseHashResult {
+    func reverseHashRequested() -> ReverseHashResult {
         let reversed = hashReverser(model.hashNumber)
-        let result = ReverseHashResult.Success(reversed, UIColor.greenColor())
-        return result
+        return .success(reversed)
     }
     
-    public func reset() -> ReverseHashResult {
+    func reset() -> ReverseHashResult {
         model = HashConfigurationModel(hashNumber: Constants.DefaultHashNumber, wordLength: Constants.DefaultWordLength)
-        updateHashFunction()
-        
-        return ReverseHashResult.NoResult("<answer displayed here>", UIColor.clearColor())
+        return .noResult("<answer displayed here>")
     }
 }
