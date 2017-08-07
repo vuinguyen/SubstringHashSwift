@@ -23,7 +23,7 @@ struct SolutionHashGenerator: HashGenerator {
             let inputStringChar = inputString[inputStringIndex]
             let lettersIndex = letters.characters.index(of: inputStringChar)
             let position = letters.characters.distance(from: letters.startIndex, to: lettersIndex!)
-            h = (h * 37 + position);
+            h = h * Int64(37) + Int64(position)
         }
         return h
     }
